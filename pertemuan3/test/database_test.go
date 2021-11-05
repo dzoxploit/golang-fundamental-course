@@ -95,5 +95,15 @@ func initDatabase() (*sql.DB, error) {
 		return nil, err
 	}
 
+	if err = model.CreateTable(db, model.TableMatkul); err != nil {
+		fmt.Println("Gagal Membuat Table Matkul")
+		return nil, err
+	}
+
+	if err = model.CreateTable(db, model.TableNilai); err != nil {
+		fmt.Println("Gagal Membuat Table Nilai")
+		return nil, err
+	}
+
 	return db, nil
 }
