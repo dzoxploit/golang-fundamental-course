@@ -1,4 +1,4 @@
-package main
+package pertemuanbagian2
 
 import (
 	"fmt"
